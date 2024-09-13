@@ -30,49 +30,35 @@
 
 
 
+// import './App.css';
+// import Bulb from './components/Bulb';
+// import Counter from './components/Counter';
+
+// function App() {
+//   // const [state, setState] = useState(0);
+
+//   return (
+//     <>
+//       <Bulb />
+//       <Counter />
+//     </>
+//   );
+// }
+
+// export default App
+
+
+
 import './App.css';
-import { useState } from "react";
-
-const Bulb = () => {
-
-  const [light, setLight] = useState("OFF");
-  console.log(light);
-  return(
-    <div>
-      {light === 'ON' ? 
-      <h1 style={{backgroundColor : "green"}}>ON</h1> : 
-      <h1 style={{backgroundColor : "gray"}}>OFF</h1>}
-      <button onClick={() => {
-        setLight(light === 'ON' ? "OFF" : "ON");
-      }}>{light === "ON" ? "OFF" : "ON"}</button>
-    </div>
-  );
-};
-
-const Count = () => {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={() => {
-        setCount(count + 1);
-      }}>+</button>
-    </div>
-  );
-}
+import Register from './components/Register';
 
 function App() {
-  // const [state, setState] = useState(0);
 
   return (
     <>
-      <Bulb />
-      <Count />
+      <Register />
     </>
   );
 }
 
 export default App
-
-
